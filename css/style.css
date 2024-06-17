@@ -1,0 +1,132 @@
+* {
+    /* remove margens */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Define a fonte padrão do site */
+    font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+    /* Define a altura mínima da página */
+    min-height: 100vh;
+    /* Define a imagem de fundo */
+    background: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/11/Presentation-Background-Examples23.jpg) no-repeat;
+    /* Faz a imagem cobrir toda a tela, centraliza e fixa */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* Define a posição da logo e da barra de navegação */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1vh 5vw;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+/* Define posição, cor e animação da barra de navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 1.5vw;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 2.3vw;
+    padding: 0;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 0.2vw;
+    background: rgb(0, 0, 0);
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+    /* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 2vh 2vw;
+    }
+
+    .navbar a {
+        margin: 1vh 0;
+        font-size: 3vw;
+    }
+}
+
+/* posiciona a caixa */
+.content {
+    margin: 10vh 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* customização da caixa */
+.box {
+    background-color: rgb(255, 255, 255); /* cor da caixa */
+    color: #000000;
+    padding: 2vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    width: 50vw; /* tamanho da largura da caixa */
+    font-size: 2em;
+    margin-bottom: 2vh;
+    margin-top: 20vh; /* ajusta a altura da caixa na tela */
+    position: relative;
+    padding-top: 40px;
+}
+
+.box img {
+    position:absolute;
+    top: 3vh;
+    right: 3vh;
+    width:20%;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+
+}
+
+.box p {
+    margin: 0.5vh 0;
+}
+
+.box .info {
+    color: #000000; /* cor das informações da caixa */
+}
+/* ajusta a posição da caixa e dos itens de acordo com o tamanho do monitor/tela */
+@media (max-width: 768px) {
+    .box {
+        width: 90%;
+        padding: 4vw;
+    }
+
+    .box p {
+        font-size: 4vw;
+    }
+}
